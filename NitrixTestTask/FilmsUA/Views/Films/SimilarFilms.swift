@@ -3,13 +3,14 @@ import SwiftUI
 struct SimilarFilms: View {
     @State private var films: [FilmCard] = []
     var id: UInt
+    var isFavourite: Bool
     
     var body: some View {
         ScrollView(.horizontal) {
             LazyHStack {
                 ForEach(films, id: \.id) { film in
                     NavigationLink {
-//                        FilmDetails(id: film.id)
+                        FilmDetails(id: film.id, isFavourite: isFavourite)
                     } label: {
                         VStack(alignment: .leading) {
                             if film.poster_path != nil {

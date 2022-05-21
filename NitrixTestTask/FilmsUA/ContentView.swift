@@ -14,11 +14,11 @@ struct ContentView: View {
                     Text("Popular")
                 }
             
-//            Favourites()
-//                .tabItem {
-//                    Image(systemName: "heart.fill")
-//                    Text("Favourites")
-//                }
+            Favourites()
+                .tabItem {
+                    Image(systemName: "heart.fill")
+                    Text("Favourites")
+                }
         }
     }
 }
@@ -26,5 +26,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(Favorites())
     }
 }

@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct FilmDetails: View {
-    @State private var film: [FilmDetail] = []
+    @State var film: [FilmDetail] = []
     var filmCard: FilmCard {
         FilmCard(id: film[0].id, poster_path: film[0].poster_path, title: film[0].title, vote_average: film[0].vote_average)
     }
@@ -124,7 +124,7 @@ struct FilmDetails: View {
                                 .fontWeight(.bold)
                         }
                     }
-                    SimilarFilms(id: self.id)
+                    SimilarFilms(id: self.id, isFavourite: isFavourite)
                         .padding(.leading, 20)
                         .padding(.top, -15)
                 }
@@ -142,8 +142,8 @@ struct FilmDetails: View {
     }
 }
 
-struct FilmDetails_Previews: PreviewProvider {
-    static var previews: some View {
-        FilmDetails(id: 550, isFavourite: false)
-    }
-}
+//struct FilmDetails_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FilmDetails(id: 550, isFavourite: false)
+//    }
+//}

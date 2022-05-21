@@ -101,9 +101,9 @@ struct Feed: View {
     }
 }
 
-struct Feed_Previews: PreviewProvider {
-    static var previews: some View {
-        Feed()
-            .environmentObject(Favorites())
-    }
-}
+//struct Feed_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Feed()
+//            .environmentObject(Favorites())
+//    }
+//}
